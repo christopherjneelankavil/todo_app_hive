@@ -51,6 +51,7 @@ class _ToDoScreenState extends State<ToDoScreen> {
         body: Center(
           child: ValueListenableBuilder(
               valueListenable: Hive.box<ToDoModel>('todoBox').listenable(),
+              // the third parameter is intentionally unused in builder
               builder: (context, Box<ToDoModel> box, _) {
                 return ListView.builder(
                   //getting item count
